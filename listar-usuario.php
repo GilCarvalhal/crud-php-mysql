@@ -16,12 +16,17 @@ if ($qtd > 0) {
         print "<th>Nome</th>";
         print "<th>E-mail</th>";
         print "<th>Data de Nascimento</th>";
+        print "<th>Ações</th>";
         print "</tr>";
         print "<tr>";
         print "<td>" . $row->id . "</td>";
         print "<td>" . $row->nome . "</td>";
         print "<td>" . $row->email . "</td>";
         print "<td>" . $row->data_nasc . "</td>";
+        print "<td>
+        <button onclick=\"location.href='?page=editar&id=" . $row->id . "'\" class='btn btn-success'>Editar</button>
+        <button class='btn btn-danger'>Excluir</button>
+        </td>";
         print "</tr>";
     }
     print "</table>";
